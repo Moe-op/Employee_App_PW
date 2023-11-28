@@ -151,11 +151,14 @@ function generatePassword() {
 
   var password = "";
   for (var i = 0; i < options.length; i++) {
-    password += getRandom(allChars);
+    var randomIndex = Math.floor(Math.random() * allChars.length);
+    password += allChars[randomIndex];
   }
 
   return password;
 }
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
